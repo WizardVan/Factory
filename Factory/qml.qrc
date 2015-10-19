@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>content/LoginPage.qml</file>
+        <file>images/logo.png</file>
+        <file>images/login_bkg.jpg</file>
+        <file>content/ActivityPage.qml</file>
+        <file>images/ActBtunBkg1.jpg</file>
+        <file>images/ActBtunBkg2.jpg</file>
+        <file>images/ActBtunBkg3.jpg</file>
+        <file>content/ActOnePage.qml</file>
+    </qresource>
+</RCC>
