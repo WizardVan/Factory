@@ -252,6 +252,7 @@ Rectangle {
 
     ListView {
         id: contentList
+        interactive: false
         highlightMoveDuration: 0
         snapMode: ListView.SnapToItem
         keyNavigationWraps: false
