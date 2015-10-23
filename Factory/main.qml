@@ -282,6 +282,11 @@ Rectangle {
                 width:contentList.width
                 height:contentList.height
             }
+            ActThreePage{
+                id:oactthreePage
+                width:contentList.width
+                height:contentList.height
+            }
 
         }
     }

@@ -211,7 +211,7 @@ Rectangle {
             Text {
                 id: actThreebutnText
                 color: "#ffffff"
-                text: qsTr("超压排气活门性能检测")
+                text: qsTr("密闭阀门密闭性检测")
                 verticalAlignment: Text.AlignBottom
                 font.bold: false
                 textFormat: Text.AutoText
@@ -229,7 +229,7 @@ Rectangle {
                 anchors.fill: parent
                 anchors.left: actThreebutnText.right
                 onClicked: {
-                    contentList.currentIndex=3
+                    contentList.currentIndex=4
                 }
             }
 

@@ -9,5 +9,6 @@
         <file>images/ActBtunBkg2.jpg</file>
         <file>images/ActBtunBkg3.jpg</file>
         <file>content/ActOnePage.qml</file>
+        <file>content/ActThreePage.qml</file>
     </qresource>
 </RCC>

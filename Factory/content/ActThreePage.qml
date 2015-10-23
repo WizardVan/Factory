@@ -3,7 +3,7 @@ import QtQuick.Controls 1.0
 
 Rectangle {
     //property alias mouseArea: mouseArea
-    id: actOneRect
+    id: actThreeRect
     width: 1000
     height: 574
     color: "#00000000"
@@ -292,7 +292,7 @@ Rectangle {
 
             Text {
                 id: titleText
-                text: qsTr("    防护门密闭性检测")
+                text: qsTr("    密闭阀门&超压排气活门密闭性能检测")
                 anchors.fill: parent
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
@@ -301,15 +301,15 @@ Rectangle {
         }
 
         Item {
-            id: widthRec
+            id: typeNumRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.17
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.8
             Text {
-                id: widthRecText
-                text: qsTr("宽度：")
+                id: typeNumRecText
+                text: qsTr("产品型号：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -321,8 +321,8 @@ Rectangle {
             }
 
             Text {
-                id: widthRecSubText
-                text: qsTr("mm")
+                id: typeNumRecSubText
+                text: qsTr("")
                 anchors.leftMargin: parent.width*0.8
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -331,7 +331,7 @@ Rectangle {
             }
 
             TextField {
-                id: widthRecTF
+                id: typeNumRecTF
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
                 anchors.fill: parent
@@ -339,15 +339,15 @@ Rectangle {
         }
 
         Item {
-            id: depthRec
+            id: pLengthRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.22
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.75
             Text {
-                id: depthRecText
-                text: qsTr("深度：")
+                id: pLengthRecText
+                text: qsTr("超压空间长：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -359,7 +359,7 @@ Rectangle {
             }
 
             Text {
-                id: depthRecSubText
+                id: pLengthRecSubText
                 text: qsTr("mm")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
@@ -369,7 +369,7 @@ Rectangle {
             }
 
             TextField {
-                id: depthRecTF
+                id: pLengthRecTF
                 anchors.fill: parent
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
@@ -377,15 +377,15 @@ Rectangle {
 
         }
         Item {
-            id: heightRec
+            id: pWidthRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.27
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.7
             Text {
-                id: heightRecText
-                text: qsTr("高度：")
+                id: pWidthRecText
+                text: qsTr("超压空间宽：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -397,7 +397,7 @@ Rectangle {
             }
 
             Text {
-                id: heightRecSubText
+                id: pWidthRecSubText
                 text: qsTr("mm")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
@@ -407,7 +407,7 @@ Rectangle {
             }
 
             TextField {
-                id: heightRecTF
+                id: pWidthRecTF
                 anchors.fill: parent
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
@@ -416,15 +416,15 @@ Rectangle {
         }
 
         Item {
-            id: pressureRec
+            id: pHeightRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.32
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.65
             Text {
-                id: pressureRecText
-                text: qsTr("超压值：")
+                id: pHeightRecText
+                text: qsTr("超压空间高：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -436,8 +436,8 @@ Rectangle {
             }
 
             Text {
-                id: pressureRecSubText
-                text: qsTr("Pa")
+                id: pHeightRecSubText
+                text: qsTr("mm")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
@@ -446,13 +446,81 @@ Rectangle {
             }
 
             TextField {
-                id: pressureRecTF
+                id: pHeightRecTF
                 anchors.fill: parent
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
             }
 
         }
+
+        Item {
+            id: testMethod
+            anchors.rightMargin: parent.width*0.75
+            anchors.bottomMargin: parent.height*0.6
+            anchors.topMargin: parent.height*0.37
+            anchors.leftMargin: parent.width *0.05
+            anchors.fill: parent
+
+            Text {
+                id: testMethodText
+                text: qsTr("检测方法：")
+                styleColor: "#00000000"
+                style: Text.Sunken
+                anchors.rightMargin: parent.width*0.7
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+                wrapMode: Text.WrapAnywhere
+                font.pixelSize: 12
+            }
+
+            ComboBox {
+                id: testMethodCB
+                anchors.leftMargin: parent.width*0.3
+                anchors.fill: parent
+            }
+        }
+
+        Item {
+            id: pressureRec
+            anchors.rightMargin: parent.width*0.5
+            anchors.bottomMargin: parent.height*0.6
+            anchors.topMargin: parent.height*0.37
+            anchors.leftMargin: parent.width *0.3
+            anchors.fill: parent
+            Text {
+                id: pressureRecText
+                text: qsTr("超压值：")
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.WrapAnywhere
+                styleColor: "#00000000"
+                anchors.rightMargin: parent.width*0.7
+                verticalAlignment: Text.AlignVCenter
+                style: Text.Sunken
+                anchors.fill: parent
+                font.pixelSize: 12
+            }
+
+            Text {
+                id: pressureRecSubText
+                text: qsTr("Pa")
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors.leftMargin: parent.width*0.8
+                anchors.fill: parent
+                font.pixelSize: 15
+            }
+
+            TextField {
+                id: pressureRecTF
+                anchors.rightMargin: parent.width*0.2
+                anchors.leftMargin: parent.width*0.3
+                anchors.fill: parent
+            }
+        }
+    }
+
 
         Item {
             id: frequencyShower
@@ -648,7 +716,8 @@ Rectangle {
             }
 
         }
-    }
+
+
 
 
 

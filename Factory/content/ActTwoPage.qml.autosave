@@ -3,7 +3,7 @@ import QtQuick.Controls 1.0
 
 Rectangle {
     //property alias mouseArea: mouseArea
-    id: actOneRect
+    id: actTwoRect
     width: 1000
     height: 574
     color: "#00000000"
@@ -301,15 +301,15 @@ Rectangle {
         }
 
         Item {
-            id: widthRec
+            id: typeNumRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.17
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.8
             Text {
-                id: widthRecText
-                text: qsTr("宽度：")
+                id: typeNumRecText
+                text: qsTr("产品型号：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -321,8 +321,8 @@ Rectangle {
             }
 
             Text {
-                id: widthRecSubText
-                text: qsTr("mm")
+                id: typeNumRecSubText
+                text: qsTr("")
                 anchors.leftMargin: parent.width*0.8
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
@@ -331,7 +331,7 @@ Rectangle {
             }
 
             TextField {
-                id: widthRecTF
+                id: typeNumRecTF
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
                 anchors.fill: parent
@@ -339,15 +339,15 @@ Rectangle {
         }
 
         Item {
-            id: depthRec
+            id: pLengthRec
             anchors.fill: parent
             anchors.rightMargin: parent.width*0.7
             anchors.topMargin: parent.height*0.22
             anchors.leftMargin: parent.width *0.05
             anchors.bottomMargin: parent.height*0.75
             Text {
-                id: depthRecText
-                text: qsTr("深度：")
+                id: pLengthRecText
+                text: qsTr("超压空间长：")
                 styleColor: "#00000000"
                 style: Text.Sunken
                 anchors.fill: parent
@@ -359,7 +359,7 @@ Rectangle {
             }
 
             Text {
-                id: depthRecSubText
+                id: pLengthRecSubText
                 text: qsTr("mm")
                 anchors.fill: parent
                 horizontalAlignment: Text.AlignHCenter
@@ -369,7 +369,7 @@ Rectangle {
             }
 
             TextField {
-                id: depthRecTF
+                id: pLengthRecTF
                 anchors.fill: parent
                 anchors.rightMargin: parent.width*0.2
                 anchors.leftMargin: parent.width*0.3
